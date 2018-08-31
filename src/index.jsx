@@ -141,7 +141,19 @@ class CircularProgressbar extends React.Component {
               y={CENTER_Y}
             >
               {text}
-              <text className={classes.text} style={styles.percentage}>%</text>
+            </text>
+          ) : null
+        }
+        
+        {
+          percentage ? (
+            <text
+              className={classes.percentage}
+              style={styles.percentage}
+              x={CENTER_X}
+              y={CENTER_Y}
+            >
+              %
             </text>
           ) : null
         }
