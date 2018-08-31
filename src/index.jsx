@@ -97,18 +97,15 @@ class CircularProgressbar extends React.Component {
       text,
     } = this.props;
     const pathDescription = this.getPathDescription();
-    const space     = 6;
     let percentageX = 64;
     let percentageY = 51;
-    let textX       = 44;
+    let textX       = 45;
     
     
-    if (percentage === 100) {
-      percentageX += space;
-      textX       += space;
+    if (percentage > 99) {
+      percentageX = 70;
     } else if (percentage < 10) {
-      percentageX -= space;
-      textX       -= space;
+      percentageX = 66;
     }
 
     return (
