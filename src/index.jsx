@@ -97,6 +97,14 @@ class CircularProgressbar extends React.Component {
       text,
     } = this.props;
     const pathDescription = this.getPathDescription();
+    let percentageX = 70;
+    let percentageY = 51;
+    
+    if (percentage === 100) {
+      percentageX = 76;
+    } else if (percentage < 10) {
+      percentageX = 64;
+    }
 
     return (
       <svg
@@ -146,12 +154,12 @@ class CircularProgressbar extends React.Component {
         }
         
         {
-          percentage ? (
+          (percentage >= 0) ? (
             <text
               className={classes.percentage}
               style={styles.percentage}
-              x={CENTER_X}
-              y={CENTER_Y}
+              x={percentageX}
+              y={percentageY}
             >
               %
             </text>
