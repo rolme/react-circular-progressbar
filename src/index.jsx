@@ -6,7 +6,7 @@ const MAX_PERCENTAGE = 100;
 const MAX_X = 100;
 const MAX_Y = 100;
 const FULL_RADIUS = 50;
-const CENTER_X = 44;
+const CENTER_X = 50;
 const CENTER_Y = 50;
 
 class CircularProgressbar extends React.Component {
