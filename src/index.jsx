@@ -6,7 +6,7 @@ const MAX_PERCENTAGE = 100;
 const MAX_X = 100;
 const MAX_Y = 100;
 const FULL_RADIUS = 50;
-const CENTER_X = 50;
+const CENTER_X = 44;
 const CENTER_Y = 50;
 
 class CircularProgressbar extends React.Component {
@@ -97,13 +97,18 @@ class CircularProgressbar extends React.Component {
       text,
     } = this.props;
     const pathDescription = this.getPathDescription();
-    let percentageX = 70;
+    const space.    = 6;
+    let percentageX = 64;
     let percentageY = 51;
+    let textX       = 44;
+    
     
     if (percentage === 100) {
-      percentageX = 76;
+      percentageX += space;
+      textX       += space;
     } else if (percentage < 10) {
-      percentageX = 64;
+      percentageX -= space;
+      textX       -= space;
     }
 
     return (
@@ -145,7 +150,7 @@ class CircularProgressbar extends React.Component {
             <text
               className={classes.text}
               style={styles.text}
-              x={CENTER_X}
+              x={textX}
               y={CENTER_Y}
             >
               {text}
