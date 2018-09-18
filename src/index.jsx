@@ -101,12 +101,15 @@ class CircularProgressbar extends React.Component {
     let percentageY = 51;
     let textX       = 45;
     
-    
-    if (percentage > 99) {
-      percentageX = 70;
-    } else if (percentage < 10) {
-      textX       = 48;
-      percentageX = 62;
+    if (percentage === 'NA') {
+      textX = 50;
+    } else {
+      if (percentage > 99) {
+        percentageX = 70;
+      } else if (percentage < 10) {
+        textX       = 48;
+        percentageX = 62;
+      }
     }
 
     return (
